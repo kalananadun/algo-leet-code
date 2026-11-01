@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "node": "^26.13.0"
+  },
+  "name": "algo-leet-code",
+  "version": "1.0.0",
+  "description": "Repos is About the Leet code journey",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalananadun/algo-leet-code.git"
+  },
+  "keywords": [],
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/kalananadun/algo-leet-code/issues"
+  },
+  "homepage": "https://github.com/kalananadun/algo-leet-code#readme"
+}
