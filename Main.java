@@ -1,18 +1,40 @@
+/**
+ * Main
+ */
 public class Main {
-    public static boolean palindromeNumber(int x){
-            char[] arr = String.valueOf(x).toCharArray();
-            for(int i=0;i<arr.length/2;i++){
-                if(arr[i] != arr[arr.length-1-i]){
-                    return false;
-                }
-            }
-            return true;
+    public static int romanToInteger(String s){
+        int result =0;
 
+        for(int i=0;i<s.length();i++){
+            char c = s.charAt(i);
+            switch(c){
+                case 'I':
+                    result+=1;
+                    break;
+                case 'V':
+                    if(i>0 && s.charAt(i-1)=='I'){
+                        result = result + 4-1;
+                    }else{
+                        result += 5;
+                    }
+                    break;
+                case 'X':
+                    if(i>0 && s.charAt(i-1)=='I'){
+                        result = result +9 -1; 
+                    }
+                    else{
+                        result = result+10;
+                    }
+                    break;
+                
+                default:
+                    break;
+            }
+        }
+        return result;    
     }
     public static void main(String[] args) {
-        
-        boolean result = Main.palindromeNumber(121);
-        System.out.println(result);
-        
-    } 
+        // 
+        System.out.println(romanToInteger("XXIV"));
+    }
 }
